@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fullView"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topLL"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/topImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_electric_bike" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/top_title"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:textColor="@color/blue_05"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topLL"
+        android:layout_height="150dp">
+        <TextView
+            android:id="@+id/scrollTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/lorem_ipsum_text"
+            android:background="@color/blue_02"
+            android:justificationMode="inter_word" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/checkboxTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check the favorite city"
+        android:layout_below="@id/scrollView"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/athensCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkboxTitleTV"
+        android:text="Athens"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/patraCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/athensCB"
+        android:text="Patra"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/radioTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Did you like the content?"
+        android:layout_below="@id/patraCB"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/agreeRB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioTitleTV"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/yesRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yes"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/noRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ratingBarTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate your experience"
+        android:layout_below="@id/agreeRB"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/likeRB"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/ratingBarTitleTV"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:stepSize="1"
+        android:theme="@style/RatingBar" />
+
+    <TextView
+        android:id="@+id/seekBarTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set your age (allowed 18-65): 18"
+        android:layout_below="@id/likeRB"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/ageSB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBarTitleTV"
+        android:min="18"
+        android:max="65" />
+
+    <TextView
+        android:id="@+id/switchTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick light or dark:"
+        android:layout_below="@id/ageSB"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/switchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/switchTitleTV"
+        android:layout_below="@id/ageSB"
+        android:text="light"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/switchBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Submit" />
+
+
+
+</RelativeLayout>
