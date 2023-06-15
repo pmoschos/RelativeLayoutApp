@@ -1,7 +1,7 @@
 # RelativeLayoutApp
 Application using Relative Layout.
 
-In this application we use **RelativeLayout** and advanced adnroid widgets like CheckBox, RatingBar etc|
+In this application we use **RelativeLayout** and advanced adnroid widgets like CheckBox, RatingBar, ScrollView etc
 
 We use inplicit and explicit **intents**.
 
